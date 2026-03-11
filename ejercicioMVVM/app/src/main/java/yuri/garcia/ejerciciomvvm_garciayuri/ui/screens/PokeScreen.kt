@@ -44,6 +44,9 @@ fun PokeScreeen(
                 Text(text = "Capturar")
             }
         }
+        if(viewModel.seFue){
+            Text(text = "Valiste papu :v")
+        }
 
         LazyColumn() {
             items(viewModel.capturados){ pokemon ->

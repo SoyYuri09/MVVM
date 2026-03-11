@@ -14,6 +14,9 @@ class PokemonViewModel : ViewModel(){ //Hereda de ViewModel
         Pokemon("Lucario", "Lucha"),
     )
 
+    var seFue by mutableStateOf(false)
+        private set
+
     var pokemonSalvaje by mutableStateOf<Pokemon?>(null)
         private set
 
@@ -31,6 +34,7 @@ class PokemonViewModel : ViewModel(){ //Hereda de ViewModel
                 capturados = capturados + it
                 pokemonSalvaje = null
             } else {
+                seFue = true
                 pokemonSalvaje = null
             }
         }
